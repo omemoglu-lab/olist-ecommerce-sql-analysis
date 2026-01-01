@@ -87,3 +87,12 @@ This analysis is subject to several limitations:
 Despite these limitations, the dataset provides a reliable foundation for identifying overall trends and key relationships within the e-commerce workflow.
 
 ## 8. Next Steps
+
+If extended further, this analysis could be enhanced in several ways:
+
+- Incorporating text-based sentiment analysis on customer reviews to better understand qualitative feedback.  
+- Performing cohort or retention analysis to evaluate repeat purchase behavior over time.  
+- Building interactive dashboards (e.g., using BI tools) to visualize key metrics such as delivery performance and customer satisfaction.  
+- Expanding the analysis to include predictive models for delivery delays or customer churn.  
+
+These extensions would allow deeper insights and support more advanced, data-driven decision making.
