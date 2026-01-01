@@ -22,6 +22,11 @@ The data spans from 2016 to 2018 and represents thousands of orders placed acros
 
 ## 3. Tools & Technologies
 
+- **SQL** – Used for data querying, aggregation, joins, and analytical calculations  
+- **Google BigQuery** – Cloud-based data warehouse used to query and analyze large-scale e-commerce data  
+- **GitHub** – Version control and project documentation  
+- **Markdown** – Used for writing and structuring project documentation
+
 ## 4. Analysis Scope
 
 ## 5. Key SQL Analyses
