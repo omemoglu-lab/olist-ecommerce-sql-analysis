@@ -29,6 +29,22 @@ The data spans from 2016 to 2018 and represents thousands of orders placed acros
 
 ## 4. Analysis Scope
 
+The analysis focuses on answering key business questions related to the performance of an e-commerce platform using SQL. The scope of the analysis includes:
+
+- Understanding overall order volume and customer distribution
+
+- Analyzing sales performance across product categories
+
+- Identifying high-spending customers and top-performing sellers
+
+- Evaluating delivery performance, including delivery times and late delivery rates
+
+- Assessing customer satisfaction through review score analysis
+
+- Examining the relationship between delivery performance and customer reviews
+
+The analysis is structured step by step, starting from high-level metrics and gradually moving toward more detailed, insight-driven queries to reflect a real-world analytical workflow.
+
 ## 5. Key SQL Analyses
 
 ## 6. Key Insights
