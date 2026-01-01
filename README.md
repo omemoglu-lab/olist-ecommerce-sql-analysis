@@ -47,7 +47,33 @@ The analysis is structured step by step, starting from high-level metrics and gr
 
 ## 5. Key SQL Analyses
 
+The project includes a set of structured SQL analyses designed to address core e-commerce business questions:
+
+- Data validation and baseline metrics: row counts, basic distributions, and order status checks to ensure data consistency
+
+- Time-based analysis: monthly order trends using purchase timestamps to observe growth patterns
+
+- Product and category analysis: sales volume and average price analysis across product categories
+
+- Customer analysis: identification of high-spending customers through aggregated order values
+
+- Delivery performance analysis: calculation of delivery durations and late delivery rates
+
+- Customer satisfaction analysis: review score distribution and comparison between on-time and late deliveries
+
+These analyses leverage core SQL concepts such as multi-table joins, aggregations, CASE statements, and date functions to transform raw transactional data into business-relevant insights.
+
 ## 6. Key Insights
+
+The analysis revealed several important insights regarding the performance of the e-commerce platform:
+
+- The majority of orders were delivered on time, indicating generally strong logistics performance; however, a noticeable portion of orders experienced delivery delays.  
+- Late deliveries were strongly associated with lower customer satisfaction, with average review scores dropping significantly compared to on-time deliveries.  
+- Customer spending was highly concentrated, with a small group of customers contributing disproportionately to total revenue.  
+- Certain product categories generated high order volumes but differed significantly in average price, suggesting varying revenue strategies across categories.  
+- Review score distribution showed that while most customers provided positive feedback, delivery performance played a critical role in negative reviews.
+
+These findings highlight the importance of delivery efficiency and customer experience as key drivers of overall platform performance.
 
 ## 7. Limitations
 
