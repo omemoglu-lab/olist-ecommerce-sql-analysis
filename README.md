@@ -77,4 +77,13 @@ These findings highlight the importance of delivery efficiency and customer expe
 
 ## 7. Limitations
 
+This analysis is subject to several limitations:
+
+- The dataset covers a fixed historical period (2016–2018), which limits the ability to reflect current market dynamics.  
+- Some orders do not contain complete delivery or review information, which may slightly affect delivery and customer satisfaction analyses.  
+- Revenue calculations are based on available order item prices and freight values and do not account for potential refunds or cancellations beyond recorded statuses.  
+- The analysis focuses on quantitative data and does not include qualitative insights such as customer review text sentiment.
+
+Despite these limitations, the dataset provides a reliable foundation for identifying overall trends and key relationships within the e-commerce workflow.
+
 ## 8. Next Steps
