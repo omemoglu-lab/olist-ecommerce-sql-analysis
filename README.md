@@ -1,12 +1,11 @@
 # olist-ecommerce-sql-analysis
 SQL-based exploratory analysis of the Brazilian Olist e-commerce dataset using Google BigQuery.
-## 1. Project Overview
 
-This project performs an exploratory data analysis (EDA) on the Brazilian Olist e-commerce dataset using SQL in Google BigQuery. The goal is to analyze customer behavior, sales performance, delivery efficiency, and customer satisfaction through structured SQL queries.
+## 1. 1. Project Vision & Business Context
 
-The project focuses on applying core SQL concepts such as joins, aggregations, and time-based analysis to extract meaningful business insights from a real-world relational dataset. It was developed as a portfolio project to demonstrate practical SQL and analytical skills.
+I chose the Olist dataset because it represents the "messy" reality of Brazilian e-commerce between 2016 and 2018. My goal wasn't just to write SQL queries, but to understand how logistical bottlenecks and payment behaviors directly impact customer satisfaction. I wanted to experience the full lifecycle of data—from cleaning inconsistent timestamps to deriving actionable business strategies.
 
-## 2. Dataset Description
+## 2. Exploring the Olist Ecosystem
 
 The analysis is based on the Brazilian Olist e-commerce public dataset, which contains real transactional data from an online marketplace.
 
@@ -27,7 +26,7 @@ The data spans from 2016 to 2018 and represents thousands of orders placed acros
 - **GitHub** – Version control and project documentation  
 - **Markdown** – Used for writing and structuring project documentation
 
-## 4. Analysis Scope
+## 4. Exploring the Olist Ecosystem
 
 The analysis focuses on answering key business questions related to the performance of an e-commerce platform using SQL. The scope of the analysis includes:
 
@@ -45,25 +44,30 @@ The analysis focuses on answering key business questions related to the performa
 
 The analysis is structured step by step, starting from high-level metrics and gradually moving toward more detailed, insight-driven queries to reflect a real-world analytical workflow.
 
-## 5. Key SQL Analyses
+## 5. Technical Deep Dive: SQL Logic
 
-The project includes a set of structured SQL analyses designed to address core e-commerce business questions:
+To extract meaningful insights from the Olist ecosystem, I structured my analysis into three main pillars: Performance Metrics, Logistics Efficiency, and Customer Satisfaction.
 
-- Data validation and baseline metrics: row counts, basic distributions, and order status checks to ensure data consistency
+A. Sales & Performance Metrics
+Monthly Trends: I used DATE_TRUNC to observe order volumes over time, identifying seasonal growth patterns in the marketplace.
 
-- Time-based analysis: monthly order trends using purchase timestamps to observe growth patterns
+Top-Performing Categories: By joining order_items, products, and category_name_translation tables, I calculated total sales and revenue per category. I discovered significant differences in average product prices across different sectors.
 
-- Product and category analysis: sales volume and average price analysis across product categories
+High-Value Customers: I identified the "Top 20 Spenders" by aggregating price and freight values. Insight: I limited this to the top 20 to focus on high-value users, which is a common practice for targeted marketing strategies.
 
-- Customer analysis: identification of high-spending customers through aggregated order values
+B. Logistics & Delivery Performance (The Critical Metric)
+Average Delivery Speed: Using DATE_DIFF, I calculated the average delivery time in days. This served as my baseline for operational efficiency.
 
-- Delivery performance analysis: calculation of delivery durations and late delivery rates
+Late Delivery Analysis: I implemented CASE WHEN logic to flag orders where the order_delivered_customer_date exceeded the order_estimated_delivery_date.
 
-- Customer satisfaction analysis: review score distribution and comparison between on-time and late deliveries
+Late Delivery Percentage: I calculated the overall percentage of delayed orders to quantify the impact of logistics failures on the platform.
 
-These analyses leverage core SQL concepts such as multi-table joins, aggregations, CASE statements, and date functions to transform raw transactional data into business-relevant insights.
+C. Customer Satisfaction & Feedback Loop
+The Impact of Delay: By joining orders and order_reviews, I analyzed the correlation between late deliveries and review scores.
 
-## 6. Key Insights
+Review Score Distribution: I used COUNT and GROUP BY to see the spread of ratings. Key Discovery: I found a direct correlation where "Late Delivery" status leads to a significantly lower average review score compared to on-time deliveries.
+
+## 6. Technical Deep Dive: SQL Logic
 
 The analysis revealed several important insights regarding the performance of the e-commerce platform:
 
